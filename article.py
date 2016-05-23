@@ -1,13 +1,15 @@
 import requests
 from datetime import datetime
 from collections import namedtuple
+import pytz
+import json
 
 class Article(object):
 
-    def __init__(self, cod, accesses):
+    def __init__(self, cod):
         self.cod = cod
         self.file = cod + '.txt'
-        self.accesses = get_accesses()
+        self.accesses = self.get_accesses()
 
     def get_cookie_session(self):
         url = 'http://analytics.scielo.org/w/accesses'
@@ -42,7 +44,7 @@ class Article(object):
         else:
             headers = {'Cookie': self.get_cookie_session()}
             try:
-                r2 = requests.get(url2, params = params2, headers = headers2)
+                r2 = requests.get(url, params = params, headers = headers)
                 return json.loads(r2.text)
             except ValueError as e:
                 print('Problem with JSON load for %s' % self.cod)
@@ -70,10 +72,10 @@ class Article(object):
                 return dt_accesses
 
     def get_accesses(self):
-        html_acc = get_access_by_doctype('html')
-        pdf_acc = get_access_by_doctype('pdf')
-        abs_acc = get_access_by_doctype('abstract')
-        epdf_acc = get_access_by_doctype('epdf')
+        html_acc = self.get_access_by_doctype('html')
+        pdf_acc = self.get_access_by_doctype('pdf')
+        abs_acc = self.get_access_by_doctype('abstract')
+        epdf_acc = self.get_access_by_doctype('epdf')
 
         accesses = {}
         if all([html_acc, pdf_acc, abs_acc, epdf_acc]):
