@@ -1,4 +1,6 @@
+import requests
 from datetime import datetime
+from collections import namedtuple
 
 class Article(object):
 
