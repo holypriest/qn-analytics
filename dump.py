@@ -1,3 +1,8 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+''' dump.py: Dumps SciELO Analytics database for Química Nova Journal. This script should run once in a month to update access files '''
+
 import requests
 from datetime import datetime
 from collections import namedtuple
