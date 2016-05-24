@@ -5,8 +5,6 @@
 
 import requests
 from datetime import datetime
-from collections import namedtuple
-import pytz
 import json
 
 def write_log(cod):
@@ -61,7 +59,7 @@ def export_raw_accesses(cod):
     ''' Export raw text containing data to a file named "cod.txt"'''
     data = get_raw_accesses(cod)
     if data is not None:
-        with open('./accesses2/'+ cod + '.txt', 'w') as f:
+        with open('./accesses/'+ cod + '.txt', 'w') as f:
             f.write(data)
         return 1
     else:
