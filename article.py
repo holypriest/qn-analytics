@@ -11,8 +11,8 @@ class Article(object):
         self.file = cod + '.txt'
         self.accesses = self.get_accesses()
 
-    def get_raw_accesses():
-        with open(self.file, 'r') as f:
+    def get_raw_accesses(self):
+        with open('./accesses/' + self.file, 'r') as f:
             return json.loads(f.read())
 
     def get_accesses_by_doctype(self, doctype):
@@ -34,10 +34,10 @@ class Article(object):
             return dt_accesses
 
     def get_accesses(self):
-        html_acc = self.get_access_by_doctype('html')
-        pdf_acc = self.get_access_by_doctype('pdf')
-        abs_acc = self.get_access_by_doctype('abstract')
-        epdf_acc = self.get_access_by_doctype('epdf')
+        html_acc = self.get_accesses_by_doctype('html')
+        pdf_acc = self.get_accesses_by_doctype('pdf')
+        abs_acc = self.get_accesses_by_doctype('abstract')
+        epdf_acc = self.get_accesses_by_doctype('epdf')
 
         accesses = {}
         if all([html_acc, pdf_acc, abs_acc, epdf_acc]):
