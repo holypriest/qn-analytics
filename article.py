@@ -12,10 +12,12 @@ class Article(object):
         self.accesses = self.get_accesses()
 
     def get_raw_accesses(self):
+        ''' Get all accesses in a raw format from file '''
         with open('./accesses/' + self.file, 'r') as f:
             return json.loads(f.read())
 
     def get_accesses_by_doctype(self, doctype):
+        ''' Get all accesses to a specific document format '''
         type_number = {'html': 0, 'pdf': 1, 'abstract': 2, 'epdf': 3}
         GMT = pytz.timezone('GMT')
         local_tz = pytz.timezone('America/Sao_Paulo')
@@ -34,6 +36,7 @@ class Article(object):
             return dt_accesses
 
     def get_accesses(self):
+        ''' Returns accesses data in a structured way '''
         html_acc = self.get_accesses_by_doctype('html')
         pdf_acc = self.get_accesses_by_doctype('pdf')
         abs_acc = self.get_accesses_by_doctype('abstract')
