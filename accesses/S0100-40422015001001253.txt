@@ -1,6 +1,166 @@
-date	html	pdf	abstract	epdf
-2015-12-01	25	4	4	1
-2016-01-01	32	11	4	1
-2016-02-01	24	20	5	4
-2016-03-01	35	9	9	0
-2016-04-01	17	9	3	0
+{
+    "options": {
+        "title": {
+            "text": "Total accesses by year and month"
+        }, 
+        "series": [
+            {
+                "data": [
+                    [
+                        1448928000000, 
+                        25
+                    ], 
+                    [
+                        1451606400000, 
+                        32
+                    ], 
+                    [
+                        1454284800000, 
+                        24
+                    ], 
+                    [
+                        1456790400000, 
+                        35
+                    ], 
+                    [
+                        1459468800000, 
+                        17
+                    ]
+                ], 
+                "name": "html"
+            }, 
+            {
+                "data": [
+                    [
+                        1448928000000, 
+                        4
+                    ], 
+                    [
+                        1451606400000, 
+                        11
+                    ], 
+                    [
+                        1454284800000, 
+                        20
+                    ], 
+                    [
+                        1456790400000, 
+                        9
+                    ], 
+                    [
+                        1459468800000, 
+                        9
+                    ]
+                ], 
+                "name": "pdf"
+            }, 
+            {
+                "data": [
+                    [
+                        1448928000000, 
+                        4
+                    ], 
+                    [
+                        1451606400000, 
+                        4
+                    ], 
+                    [
+                        1454284800000, 
+                        5
+                    ], 
+                    [
+                        1456790400000, 
+                        9
+                    ], 
+                    [
+                        1459468800000, 
+                        3
+                    ]
+                ], 
+                "name": "abstract"
+            }, 
+            {
+                "data": [
+                    [
+                        1448928000000, 
+                        1
+                    ], 
+                    [
+                        1451606400000, 
+                        1
+                    ], 
+                    [
+                        1454284800000, 
+                        4
+                    ], 
+                    [
+                        1456790400000, 
+                        0
+                    ], 
+                    [
+                        1459468800000, 
+                        0
+                    ]
+                ], 
+                "name": "epdf"
+            }
+        ], 
+        "yAxis": {
+            "title": {
+                "text": "Accesses"
+            }, 
+            "labels": {
+                "format": "{value}"
+            }, 
+            "opposite": false, 
+            "min": 0
+        }, 
+        "chart": {
+            "type": "line", 
+            "backgroundColor": "transparent"
+        }, 
+        "tooltip": {
+            "footerFormat": "</table>", 
+            "shared": true, 
+            "headerFormat": "Accesses on <strong>{point.x:%B %Y}</strong><table style=\"width: 100%; border-top: 1px solid #CCC;\">", 
+            "pointFormat": "<tr><td><span style=\"color:{point.color}\">\u25cf</span> {series.name}: </td><td style=\"text-align: right\"><strong>{point.y}</strong></td></tr>", 
+            "useHTML": true
+        }, 
+        "credits": {
+            "text": "Source: SciELO.org", 
+            "href": "http://www.scielo.org"
+        }, 
+        "rangeSelector": {
+            "enabled": false
+        }, 
+        "navigator": {
+            "series": {
+                "data": [
+                    [
+                        1448928000000, 
+                        34
+                    ], 
+                    [
+                        1451606400000, 
+                        48
+                    ], 
+                    [
+                        1454284800000, 
+                        53
+                    ], 
+                    [
+                        1456790400000, 
+                        53
+                    ], 
+                    [
+                        1459468800000, 
+                        29
+                    ]
+                ]
+            }
+        }, 
+        "legend": {
+            "enabled": true
+        }
+    }
+}

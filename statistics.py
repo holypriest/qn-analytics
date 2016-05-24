@@ -33,11 +33,11 @@ def total_access_per_interval(aid, articles, end, months):
     return interval_access
 
 articles = {}
-for article in os.listdir('/home/holypriest/dev/python/analytics/accesses'):
+for article in os.listdir('./accesses'):
     articles[article[0:23]] = load_article(article[0:23])
 
 accesses = {}
 for article in articles:
     accesses[article] = total_access_per_interval(article, articles,
             '2016-04-01', 12)
-    print max(accesses.iteritems(), key=operator.itemgetter(1))[0]
+print max(accesses.iteritems(), key=operator.itemgetter(1))[0]

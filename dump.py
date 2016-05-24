@@ -66,4 +66,4 @@ with open('manuscript_ids.txt', 'r') as f:
     for line in f:
         raw_access = export_raw_accesses(line.strip())
         if raw_access is not None:
-            print('Stripped %s graph.' % line.strip())
+            print('Stripped %s data.' % line.strip())

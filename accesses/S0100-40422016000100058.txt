@@ -1,3 +1,106 @@
-date	html	pdf	abstract	epdf
-2016-03-01	38	7	9	0
-2016-04-01	27	12	12	0
+{
+    "options": {
+        "title": {
+            "text": "Total accesses by year and month"
+        }, 
+        "series": [
+            {
+                "data": [
+                    [
+                        1456790400000, 
+                        38
+                    ], 
+                    [
+                        1459468800000, 
+                        27
+                    ]
+                ], 
+                "name": "html"
+            }, 
+            {
+                "data": [
+                    [
+                        1456790400000, 
+                        7
+                    ], 
+                    [
+                        1459468800000, 
+                        12
+                    ]
+                ], 
+                "name": "pdf"
+            }, 
+            {
+                "data": [
+                    [
+                        1456790400000, 
+                        9
+                    ], 
+                    [
+                        1459468800000, 
+                        12
+                    ]
+                ], 
+                "name": "abstract"
+            }, 
+            {
+                "data": [
+                    [
+                        1456790400000, 
+                        0
+                    ], 
+                    [
+                        1459468800000, 
+                        0
+                    ]
+                ], 
+                "name": "epdf"
+            }
+        ], 
+        "yAxis": {
+            "title": {
+                "text": "Accesses"
+            }, 
+            "labels": {
+                "format": "{value}"
+            }, 
+            "opposite": false, 
+            "min": 0
+        }, 
+        "chart": {
+            "type": "line", 
+            "backgroundColor": "transparent"
+        }, 
+        "tooltip": {
+            "footerFormat": "</table>", 
+            "shared": true, 
+            "headerFormat": "Accesses on <strong>{point.x:%B %Y}</strong><table style=\"width: 100%; border-top: 1px solid #CCC;\">", 
+            "pointFormat": "<tr><td><span style=\"color:{point.color}\">\u25cf</span> {series.name}: </td><td style=\"text-align: right\"><strong>{point.y}</strong></td></tr>", 
+            "useHTML": true
+        }, 
+        "credits": {
+            "text": "Source: SciELO.org", 
+            "href": "http://www.scielo.org"
+        }, 
+        "rangeSelector": {
+            "enabled": false
+        }, 
+        "navigator": {
+            "series": {
+                "data": [
+                    [
+                        1456790400000, 
+                        54
+                    ], 
+                    [
+                        1459468800000, 
+                        51
+                    ]
+                ]
+            }
+        }, 
+        "legend": {
+            "enabled": true
+        }
+    }
+}
