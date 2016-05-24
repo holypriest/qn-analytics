@@ -49,3 +49,12 @@ class Article(object):
                 accesses[date] = acc(html_acc[date], pdf_acc[date],
                         abs_acc[date], epdf_acc[date])
         return accesses
+
+    def get_accumulated_access(self):
+        ''' Returns monthly accumulated access data '''
+        acc_before = 0
+        acc_data = {}
+        for date in sorted(self.accesses):
+            acc_data[date] = sum(self.accesses[date]) + acc_before
+            acc_before = acc_data[date]
+        return acc_data
